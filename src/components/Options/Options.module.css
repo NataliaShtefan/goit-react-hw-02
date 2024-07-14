@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    gap: 16px;
+    padding: 16px 32px;
+}
+
+.btn {
+    font-size: 24px;
+    border: 1px solid violet;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
