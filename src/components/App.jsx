@@ -29,8 +29,11 @@ const updateFeedback = feedbackType => {
 
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const positive = Math.round((feedback.good / totalFeedback) * 100);
 
-const hendleReset = () => {
+
+
+const handleReset = () => {
   setFeedback({ 
     good: 0,
     neutral: 0,
@@ -41,13 +44,14 @@ const hendleReset = () => {
   return (
     <>
       < Description />
-      < Options updateFeedback={updateFeedback} hendleReset={hendleReset} total={totalFeedback}/>
+      < Options updateFeedback={updateFeedback} handleReset={handleReset} total={totalFeedback}/>
       {totalFeedback > 0 ? (
       < Feedback 
       good={feedback.good} 
       neutral={feedback.neutral}
       bad={feedback.bad} 
-      total={totalFeedback}/> ) : (
+      total={totalFeedback}
+      positive={positive}/> ) : (
         < Notification message="No feedback given" />
        ) }
     </>

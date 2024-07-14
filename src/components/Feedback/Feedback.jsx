@@ -1,9 +1,8 @@
 import s from "./Feedback.module.css"
 
 
-const Feedback = ({ good, neutral, bad, total}) => {
+const Feedback = ({ good, neutral, bad, total, positive}) => {
 
-  const positive = Math.round((good / total) * 100)
 
 
   return (
