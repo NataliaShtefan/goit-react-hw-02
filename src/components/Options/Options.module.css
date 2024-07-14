@@ -10,3 +10,7 @@
     border-radius: 4px;
     padding: 8px 16px;
 }
+
+.btn:hover, .btn:focus {
+background-color: rgb(161, 103, 145);
+}
